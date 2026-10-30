@@ -55,7 +55,7 @@ export default function LoginScreen() {
         <Image source={Logo} style={styles.logo} />
         <Text style={styles.textTop}>Pokédex</Text>
         <Text style={{ color: theme.colors.textSecondary }}>
-Turma DS – ETE · Arthur Yuzo
+Turma DS – ETE · Pedro Brasil
 </Text>
       </View>
       
