@@ -55,7 +55,7 @@ export default function LoginScreen() {
         <Image source={Logo} style={styles.logo} />
         <Text style={styles.textTop}>Pokédex</Text>
         <Text style={{ color: theme.colors.textSecondary }}>
-Turma DS – ETE · Pedro Brasil
+Turma DS – ETE · Pedro Brasil carli
 </Text>
       </View>
       
