@@ -1,6 +1,6 @@
 const DEMO_USER = {
-    email: 'flavio@pokedex.com',
-    password: '123456',
+    email: 'brasil@pokedex.com',
+    password: '654321',
 };
 
 export function validateLogin(

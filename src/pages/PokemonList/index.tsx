@@ -212,7 +212,11 @@ export default function PokemonListScreen() {
       </TouchableOpacity>
 
       {lastViewed ? (
-        <View style={{ paddingHorizontal: 24, marginBottom: 12, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <TouchableOpacity
+        onPress={() =>
+          navigation.navigate('PokemonDetail', { id: lastViewed.id })
+        }
+        style={{ paddingHorizontal: 24, marginBottom: 12, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
           <Image source={{ uri: lastViewed.imageUrl }} style={{ width: 48, height: 48 }} />
           <View style={{ flex: 1 }}>
             <Text style={{ color: theme.colors.text, fontWeight: '700' }}>
@@ -229,18 +233,27 @@ export default function PokemonListScreen() {
               ))}
             </View>
           </View>
-        </View>
+        </TouchableOpacity>
       ) : null}
 
       <View style={styles.actionsRow}>
         <TouchableOpacity
           style={[styles.actionButton, styles.favoritesButton]}
           onPress={() => setShowOnlyFavorites((prev) => !prev)}
+          
         >
           <Text style={styles.actionButtonText}>
             {showOnlyFavorites ? 'Mostrar Todos' : 'Mostrar Favoritos'}
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+style={[styles.actionButton,
+{ backgroundColor: theme.colors.primary }]}
+onPress={() => navigation.navigate('About')}>
+<Text style={styles.actionButtonText}>
+Sobre
+</Text>
+</TouchableOpacity>
       </View>
 
       <FlatList
